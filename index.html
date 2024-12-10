@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tindog Project</title>
+
+  <style>
+    html, body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    @keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  .hero{
+    display: grid;
+    grid-template-rows: 0.7fr 1fr 1fr 0.5fr 1fr 1fr;
+    grid-template-columns: 1fr 0.8fr 0.8fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px;
+    height: 90vh;
+    width: auto;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    animation: gradient-animation 18s ease infinite;
+    padding: none;
+    margin: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  h1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-left: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .btn{
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  #apple{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 180px;
+    border: 0;
+  }
+
+  #google{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 180px;
+    border: 2 !important;
+    border-color: white;
+    background-color: transparent !important;
+    padding-left: 10px;
+  }
+
+  #image{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    width: auto;
+    padding-top: 39px;
+    padding-left: 60px;
+  }
+
+  .features{
+    background-color: white;
+    position: relative;
+    margin-top: -1px !important;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+  }
+
+  #features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .features-text{
+    color: black !important;
+    padding-right: 192px !important;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+  .features-textt{
+    color: black !important;
+    padding-right: 148px !important;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+  .features-texttt{
+    color: black !important;
+    padding-right: 63px !important;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+
+  
+  .features-paragraph{
+    color: black !important;
+    font-size: 15px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .features-paragraphh{
+    color: black !important;
+    font-size: 15px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .features-paragraphhh{
+    color: black !important;
+    font-size: 15px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .features-container{
+    display: flex;
+    flex-direction: column;
+    gap: -200px;
+  }
+
+  .features svg{
+    margin-left: 40px;
+    background-color: rgb(241, 240, 240);
+    color: black;
+    background-size: 100px;
+    padding: 7px;
+    border-radius: 10px;
+  }
+
+  .features svg, .features h1{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center !important;
+    color: black;
+    justify-content: center;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between !important;
+    height: 150px;
+    width: 30% !important;
+    background-color: red;
+  }
+
+  #card{
+    height: 150px;
+    width: 300px;
+    background-color: white;
+  }
+
+  #cardd{
+    height: 150px;
+    width: 300px;
+    background-color: white;
+  }
+
+  #carddd{
+    height: 150px;
+    width: 300px;
+    background-color: white;
+  }
+
+  #testimonial{
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial{
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial-text{
+    font-size: 30px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-paragraph{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-size: 30px;
+    align-self: center;
+    font-size: 20px !important;
+    font-weight: thin !important;
+  }
+
+  .dog{
+    border-radius: 400px;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+  }
+
+  .flex-testimonials ul {
+  display: flex; /* Activate Flexbox on the container */
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Align the images vertically */
+  gap: 70px; /* Add spacing between the images */
+  list-style: none; /* Remove bullets from the list */
+  padding: 0; /* Remove default padding of the list */
+  margin: 0; /* Remove default margin */
+}
+
+.flex-testimonials ul li img {
+  width: 150px; /* Resize the images */
+  height: 30px; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits without distortion */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#pricing{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.pricing h1{
+  margin-bottom: 4px !important;
+}
+
+.pricing p{
+  margin-top: 3px !important;
+  font-weight: 25px !important;
+}
+
+.pricing-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 50vh !important;
+  flex-wrap: nowrap;
+}
+
+.pricing-container h1{
+  z-index: 99999;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 25px !important;
+}
+
+.pricing-container h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px !important;
+  margin: 0;
+  padding: 10px;
+  padding-top: 12px !important;
+}
+
+.pricing-card{
+  background-color: rgb(255, 255, 255);
+  height: 320px;
+  width: 400px;
+  border: 1px solid rgb(53, 53, 53);
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+
+
+.pricing-container li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding-right: 24px !important;
+}
+
+.pricing-card button{
+  width: 240px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#second-card{
+  background-color: black !important;
+  color: white !important;
+}
+
+#third-card{
+  background-color: black !important;
+  color: white !important;
+}
+
+#third-button{
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+#footer{
+  background: linear-gradient(to right, rgb(255, 85, 0), rgb(255, 79, 108));
+  padding: 20px;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Title -->
+  <section id="title">
+    <div class="hero">
+      <h1 class="div-item">Meet new and <br>interesting dogs <br>nearby.</h1>
+      <button id="apple" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+      </svg>Download</button>
+      <button id="google" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-google-play mb-1" viewBox="0 0 16 16">
+<path
+          d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295ZM1 13.396V2.603L6.846 8 1 13.396ZM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z" />
+</svg>Download</button>
+<img id="image" class="div-items" src="https://i.ibb.co/y0jZyW3/iphone.png">
+    </div>
+  </section>
+
+
+  <!-- Features -->
+  <section class="features">
+    <div id="features">
+        <div class="card" id="card">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-check2-circle"
+            viewBox="0 0 16 16">
+<path
+              d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+<path
+              d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+</svg>
+<div class="features-container">
+<h1 class="features-text">Easy to use.</h1>
+<p class="features-paragraph">So easy to use, even your dog could do it.</p>
+</div>
+    </div>
+
+
+
+    <div class="card" id="cardd">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+            <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z"/>
+            <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z"/>
+            </svg>
+<div class="features-container">
+<h1 class="features-textt">Elite Clientele.</h1>
+<p class="features-paragraphh">We have all the dogs, the greatest dogs.</p>
+        </div>
+    </div>
+
+    <div class="card" id="carddd">
+        <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-arrow-through-heart"
+        viewBox="0 0 16 16">
+<path fill-rule="evenodd"
+          d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z" />
+</svg>
+<div class="features-container">
+<h1 class="features-texttt">Guaranteed to work.</h1>
+<p class="features-paragraphhh">Find the love of your dog's life or your money back.</p>
+        </div>
+    </div>
+
+
+
+
+</div>
+  </section>
+  <!-- Testimonial -->
+  <section id="testimonial">
+    <div class="testimonial">
+        <h1 class="testimonial-text">"I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. <br>Woof."</h1>
+        <img class="dog" src="/images/dog-img.jpg">
+        <p class="testimonial-paragraph">Pebbles, New York</p>
+    </div>
+    <div class="flex-testimonials">
+      <ul>
+        <li id=""><img src="/images/techcrunch.png"></li>
+        <li id=""><img src="/images/mashable.png"></li>
+        <li id=""><img src="/images/bizinsider.png"></li>
+        <li id="imgg"><img src="/images/tnw.png"></li>
+      </ul>
+    </div>
+  </section>
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="pricing">
+      <h1>A Plan for Every Dog's Needs</h1>
+      <p>Simple and affordable price plans for you and your dog.</p>
+    </div>
+    <div class="pricing-container">
+
+
+      <div class="pricing-card">
+        <div class="">
+        <h1>Chihuahua</h1>
+        <hr />
+        </div>
+        <h2>$0/mo</h2>
+        <ul>
+        <p><li>5 Matches Per Day</li></p>
+        <p><li>10 Messages Per Day</li></p>
+        <p><li>Unlimited App Usage</li></p>
+      </ul>
+      <button>Sign up for free</button>
+      </div>
+
+
+      <div class="pricing-card">
+        <div class="">
+          <h1>Labrador</h1>
+          <hr />
+          </div>
+          <h2>$15/mo</h2>
+          <ul>
+          <p><li>Unlimited Matches</li></p>
+          <p><li>Unlimited Messages</li></p>
+          <p><li>Unlimited App Usage</li></p>
+        </ul>
+        <button id="second-card">Get started</button>
+      </div>
+
+
+
+      <div id="third-card" class="pricing-card">
+        <div class="">
+          <h1>Mastiff</h1>
+          <hr />
+          </div>
+          <h2>$29/mo</h2>
+          <ul>
+          <p><li>Priority Listing</li></p>
+          <p><li>Unlimited Matches & Messages</li></p>
+          <p><li>Unlimited App Usage</li></p>
+        </ul>
+        <button id="third-button">Contact Us</button>
+      </div>
+  
+
+    </div>
+  </section>
+  <!-- Footer -->
+  <section id="footer">
+<div>
+  <p>property of starboylmao</p>
+</div>
+  </section>
+</body>
+
+</html>
